@@ -3,3 +3,8 @@ https://www.youtube.com/watch?v=rfu67imv5-I&list=PLeqyOOqxeiIODQBO3fbzCuIfVpF9ZS
 https://meet.google.com/mho-khdw-fhj
 
 https://discord.gg/vcYaQu6c
+
+TODO:
+¬ывести в консоль стишок "¬ лесу родилась ®лочка".
+—тишок должен быть выровнен по середине окна консоли,
+куплеты должны быть разделены пустой строкой.
