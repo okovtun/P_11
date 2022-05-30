@@ -5,6 +5,11 @@ https://meet.google.com/mho-khdw-fhj
 https://discord.gg/vcYaQu6c
 
 TODO:
+Написать программу "Калькулятор", которая принимает, и вычисляет выражения вида:
+	2+3
+	2+3=5;
+
+TODO:
 https://github.com/okovtun/P_11/blob/master/VariablesTask.pdf
 
 Constants:

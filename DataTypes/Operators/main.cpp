@@ -62,4 +62,7 @@ a = 8;*/
 #endif // COMPOUND_ASSIGNMENTS
 
 	cout << (!true == false) << endl;
+	cout << (true || false || false) << endl;
 }
+
+//Control structures
