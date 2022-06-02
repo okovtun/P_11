@@ -1,0 +1,38 @@
+if(Condition)
+{
+	....;
+	code1;
+	....;
+}
+else
+{
+	....;
+	code2;
+	....;
+}
+
+Condition - это условие.
+Условие - это операция сравнения.
+&& - AND
+|| -  OR
+
+
+
+if(Condition1)
+{
+	code1;
+}
+else if(Condition2)
+{
+	code2;
+}
+...
+...
+else if(ConditionN)
+{
+	codeN;
+}
+else
+{
+	default code;
+}

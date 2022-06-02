@@ -6,6 +6,9 @@ using std::endl;
 
 #define tab "\t"
 
+//switch
+//variable
+
 void main()
 {
 	setlocale(LC_ALL, "");
