@@ -6,6 +6,7 @@ using namespace std;
 
 //#define WHILE_1
 //#define WHILE_2
+//#define DO_WHILE
 
 void main()
 {
@@ -32,6 +33,7 @@ void main()
 	}
 #endif // WHILE_2
 
+#ifdef DO_WHILE
 	char key;	//Эта переменная будет хранить код клавиши
 	do
 	{
@@ -41,6 +43,10 @@ void main()
 		cout << (int)key << "\t" << key << endl;
 		//(int)key - явное преобразование переменной key в тип данных int
 	} while (key != Escape);
+#endif // DO_WHILE
+
+
+
 }
 
 //FOR - это цикл на заданное число итераций
