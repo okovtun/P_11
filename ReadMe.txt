@@ -5,6 +5,10 @@ https://meet.google.com/mho-khdw-fhj
 https://discord.gg/vcYaQu6c
 
 TODO:
+Вывести на экран все фигуры из файла: 
+https://github.com/okovtun/P_11/blob/master/ControlStructures/Geometria/Task.txt
+
+DONE:
 1. Вывести на экран таблицу умножения;
 2. Вывести на экран таблицу Пифагора;
 3. Вывести на экран ряд простых чисел, до введенного с клавиатуры.
