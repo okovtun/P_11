@@ -9,6 +9,9 @@ using std::endl;
 //#define FACTORIAL
 //#define POWER
 //#define ASCII
+//#define TICK
+//#define PYTHAGORAS_TABLE
+//#define SIMPLE_NUMBERS
 
 void main()
 {
@@ -71,13 +74,7 @@ void main()
 	cout << "Вот и сказочке конец!" << endl;
 #endif // ASCII
 
-	/*for (int i = 0; i < 10; i++)
-	{
-		for (int j = 0; j < 10; j++)
-		{
-			cout << i << "\t" << j << endl;
-		}
-	}*/
+#ifdef TICK
 	for (int h = 0; h < 24; h++)
 	{
 		for (int m = 0; m < 60; m++)
@@ -91,4 +88,45 @@ void main()
 			}
 		}
 	}
+#endif // TICK
+
+#ifdef PYTHAGORAS_TABLE
+	for (int i = 1; i <= 10; i++)
+	{
+		for (int j = 1; j <= 10; j++)
+		{
+			//cout << i << " * " << j << " = " << i*j << endl;
+			cout << i * j << "\t";
+		}
+		cout << endl;
+	}
+#endif // PYTHAGORAS_TABLE
+
+#ifdef SIMPLE_NUMBERS
+	int n;
+	cout << "Введите предельное число: "; cin >> n;
+	for (int i = 0; i <= n; i++)
+	{
+		bool simple = true;	//Предполагаем что число простое, но это нужно проверить
+		for (int j = 2; j < i; j++)
+		{
+			if (i%j == 0)
+			{
+				simple = false;
+				break;		//прерывает текущую итерацию и все последующие
+				continue;	//прерывает текущую итерацию, и переходит к следующей
+			}
+		}
+		if (simple)cout << i << "\t";
+	}
+	cout << endl;
+#endif // SIMPLE_NUMBERS
+
+	int n;
+	cout << "Введите предельное число: "; cin >> n;
+	for (int a = 0, b = 1, c = a + b; a < n; c = (a = b) + (b = c))
+	{
+		cout << a << "\t";
+	}
+	cout << endl;
 }

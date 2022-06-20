@@ -1,51 +1,66 @@
-#include<iostream>
-#include <conio.h>
-using namespace std;
-void main()
+#include <iostream>
+
+// #define HM1
+// #define HM2 
+ //#define HM3
+ #define HM4
+
+
+int main()
 {
-	setlocale(LC_ALL, "Russian");
-	int n;
-	int i = 0;
-	char key; // переменная будет хранить код клавиши
-	do
+	setlocale(LC_ALL, "Rus");
+#ifdef HM1
+	for (int j = 2; j <= 10; j++)
 	{
-		key = _getch();
-		if (key == 'w') cout << "W" << " Вы идёте вперёд." << endl;
-		else if (key == 's')cout << "S" << " Вы идёте назад." << endl;
-		else if (key == 'a')cout << "A" << " Вы идёте налево." << endl;
-		else if (key == 'd')cout << "D" << " Вы идёте направо." << endl;
-		else if (key == 32) cout << "SPACE" << " Вы прыгнули." << endl;
-		else if (key == 101)cout << "E" << " Вы взаимодействуете с предметом." << endl;
-		else if (key == 114)cout << "R" << " Вы перезаряжаетесь." << endl;
-		else if (key == 49) cout << "1" << " Вы переключились на основное оружие." << endl;
-		else if (key == 50) cout << "2" << " Вы переключились на пистолет." << endl;
+		for (int i = 2; i <= 10; i++)
+		{
+			std::cout << i << "x" << j << "=" << i * j << "\t";
 		}
-		else if (key == 51) {
-			cout << "3" << " Вы переключились на нож." << endl;
+		std::cout << std::endl;
+	}
+#endif
+
+#ifdef HM2
+
+	for (int j = 1; j <= 10; j++)
+	{
+		for (int i = 1; i <= 10; i++)
+		{
+			std::cout << j * i << "\t";
 		}
-		else if (key == 52) {
-			cout << "4" << " Вы переключились на гранату." << endl;
-		}
-		else if (key == 53) {
-			cout << "5" << " Вы переключились на бомбу." << endl;
-		}
-		else if (key == 113) {
-			cout << "Q" << " Вы сменили оружие." << endl;
-		}
-		else if (key == 121) {
-			cout << "Y" << " Вы открыли общий чат." << endl;
-		}
-		else if (key == 103) {
-			cout << "G" << " Вы выбросили оружие." << endl;
-		}
-		else if (key == 102) {
-			cout << "F" << " Вы осмотрели оружие." << endl;
-		}
-		else if (key == 9) {
-			cout << "Tab" << " Вы посмотрели список игроков." << endl;
-		}
-		else if (key == 13) {
-			cout << "Enter" << " Вы выстрелили." << endl;
-		}
-	} while (key != 27);
+		std::cout << std::endl;
+	}
+
+#endif  
+
+#ifdef HM3
+	int count = 1;
+	long long num = 2;
+	std::cout << "Введите кол-во простых чисел: "; std::cin >> count;
+
+	for (int i = 0; i <= count;)
+	{
+		if ((num * num) % 24 == 1) { std::cout << i << ": " << num << "\n"; i++; }
+		num++;
+
+	}
+
+#endif // HM3
+
+#ifdef HM4
+	long double num = 0;
+	long double temp = 0;
+	long double tmp = 1;
+
+	int count = 1;
+	std::cout << "Сколько вывести чисел Фибоначчи: -> "; std::cin >> count;
+
+	for (int i = 0; i <= count; i++)
+	{
+		std::cout << i << ": " << num << std::endl;
+		temp = tmp + num;
+		num = tmp;
+		tmp = temp;
+	}
+#endif // HM4
 }
