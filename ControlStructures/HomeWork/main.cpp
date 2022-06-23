@@ -1,66 +1,121 @@
 #include <iostream>
-
-// #define HM1
-// #define HM2 
- //#define HM3
- #define HM4
-
-
-int main()
+#include <conio.h>
+#include <windows.h>
+using namespace std;
+#define Triangle1
+#define Triangle2
+#define Triangle3
+#define Triangle4
+int n;
+int x, katet;
+void main()
 {
-	setlocale(LC_ALL, "Rus");
-#ifdef HM1
-	for (int j = 2; j <= 10; j++)
+	setlocale(LC_ALL, "Russian");
+#ifdef Triangle1
+	cout << "¬ведите размер: "; cin >> n;
+
+	for (int i = n; i > 0; i--)
 	{
-		for (int i = 2; i <= 10; i++)
+		for (int j = n; j > 0; j--)
 		{
-			std::cout << i << "x" << j << "=" << i * j << "\t";
+			cout << "*";
 		}
-		std::cout << std::endl;
+		cout << endl;
+	}
+
+	cout << endl;
+#endif
+#ifdef Triangle2
+	cout << "¬веди размер: "; cin >> x;
+	katet = x;
+	for (int i = 0; i < x; i++)
+	{
+		for (int j = x; j >= 0; j--)
+		{
+			if (j > x - katet)
+				cout << " ";
+			else
+				cout << "*";
+		}
+		cout << endl;
+		katet--;
 	}
 #endif
+#ifdef Triangle3
+	cout << "¬ведите размер пр€моугольника: "; cin >> n;
 
-#ifdef HM2
-
-	for (int j = 1; j <= 10; j++)
+	for (int i = n; i > 0; i--)
 	{
-		for (int i = 1; i <= 10; i++)
+		for (int j = i; j > 0; j--)
 		{
-			std::cout << j * i << "\t";
+			cout << "*";
 		}
-		std::cout << std::endl;
+		cout << endl;
 	}
-
-#endif  
-
-#ifdef HM3
-	int count = 1;
-	long long num = 2;
-	std::cout << "¬ведите кол-во простых чисел: "; std::cin >> count;
-
-	for (int i = 0; i <= count;)
+	cout << endl;
+#endif
+#ifdef Triangle4
+	cout << "¬ведите размер пр€моугольного треугольника: "; cin >> n;
+	for (int i = 0; i < n; i++)
 	{
-		if ((num * num) % 24 == 1) { std::cout << i << ": " << num << "\n"; i++; }
-		num++;
-
+		for (int j = 0; j <= i; j++)
+		{
+			cout << '*';
+		}
+		cout << endl;
 	}
-
-#endif // HM3
-
-#ifdef HM4
-	long double num = 0;
-	long double temp = 0;
-	long double tmp = 1;
-
-	int count = 1;
-	std::cout << "—колько вывести чисел ‘ибоначчи: -> "; std::cin >> count;
-
-	for (int i = 0; i <= count; i++)
-	{
-		std::cout << i << ": " << num << std::endl;
-		temp = tmp + num;
-		num = tmp;
-		tmp = temp;
-	}
-#endif // HM4
+#endif 
 }
+/*
+* * * * *
+* * * * *
+* * * * *
+* * * * *
+* * * * *
+
+Triangle1
+*
+* *
+* * *
+* * * *
+* * * * *
+
+Triangle2
+* * * * *
+* * * *
+* * *
+* *
+*
+
+Triangle3
+* * * * *
+  * * * *
+	* * *
+	  * *
+		*
+
+Triangle4
+		*
+	  * *
+	* * *
+  * * * *
+* * * * *
+
+Rombus
+	/\
+   /  \
+  /    \
+ /      \
+/        \
+\        /
+ \      /
+  \    /
+   \  /
+	\/
+
++ - + - +
+- + - + -
++ - + - +
+- + - + -
++ - + - +
+*/

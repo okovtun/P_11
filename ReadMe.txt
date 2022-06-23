@@ -6,7 +6,9 @@ https://discord.gg/vcYaQu6c
 
 TODO:
 Вывести на экран все фигуры из файла: 
-https://github.com/okovtun/P_11/blob/master/ControlStructures/Geometria/Task.txt
+1. https://github.com/okovtun/P_11/blob/master/ControlStructures/Geometria/Task.txt;
+2. https://github.com/okovtun/BV_011/blob/master/ControlStructures/Geometria/Task/ChessBoard.jpg;
+3. https://github.com/okovtun/BV_011/blob/master/ControlStructures/Geometria/Task/HardChess.jpg
 
 DONE:
 1. Вывести на экран таблицу умножения;
