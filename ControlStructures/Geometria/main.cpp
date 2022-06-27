@@ -1,85 +1,39 @@
 ﻿#include<iostream>
 using namespace std;
 
-//#define SQUARE
-//#define TRIANGLE_1
-//#define TRIANGLE_2
-#define TRIANGLE_3
-#define TRIANGLE_4
-//#define ROMBUS
+#define UPPER_LEFT_ANGLE	(char)218
+#define UPPER_RIGHT_ANGLE	(char)191
+#define LOWER_LEFT_ANGLE	(char)192
+#define LOWER_RIGHT_ANGLE	(char)217
+#define HORIZ_LINE			(char)196
+#define VERT_LINE			(char)179
+#define WHITE_BOX			"\xDB\xDB"
+#define BLACK_BOX			"  "
 
 void main()
 {
-	setlocale(LC_ALL, "");
+	/*for (int i = 176; i < 224; i++)
+	{
+		cout << i << "\t" << (char)i << endl;
+	}*/
+
 	int n;
-	cout << "Введите число: "; cin >> n;
-
-#ifdef SQUARE
-	for (int i = 0; i < n; i++)//этот цикл повторяет вывод строки на экран, и таким образом мыполучаем квадрат
+	setlocale(LC_ALL, "");
+	cout << "Введите размер доски: "; cin >> n;
+	n++;
+	setlocale(LC_ALL, "C");
+	for (int i = 0; i <= n; i++)
 	{
-		for (int i = 0; i < n; i++)//этот цикл повторяет вывод звездочки, и таким обрахзом мы получаем строку из звездочек
+		for (int j = 0; j <= n; j++)
 		{
-			cout << "* ";
-		}
-		cout << endl;	//после вывода строки нужно перейти на новую строку.
-	}
-#endif // SQUARE
-
-#ifdef TRIANGLE_1
-	//		Start ; Stop ;	Step
-	for (int i = 0; i < n; i++)
-	{
-		for (int j = 0; j <= i; j++)
-		{
-			cout << "* ";
+			if (i == 0 && j == 0)cout << UPPER_LEFT_ANGLE;
+			else if (i == 0 && j == n)cout << UPPER_RIGHT_ANGLE;
+			else if (i == n && j == 0)cout << LOWER_LEFT_ANGLE;
+			else if (i == n && j == n)cout << LOWER_RIGHT_ANGLE;
+			else if (i == 0 || i == n)cout << HORIZ_LINE << HORIZ_LINE;
+			else if (j == 0 || j == n)cout << VERT_LINE;
+			else cout << (i % 2 == j % 2 ? WHITE_BOX : BLACK_BOX);
 		}
 		cout << endl;
 	}
-#endif // TRIANGLE_1
-
-#ifdef TRIANGLE_2
-	for (int i = 0; i < n; i++)
-	{
-		for (int j = i; j < n; j++)
-		{
-			cout << "* ";
-		}
-		cout << endl;
-	}
-#endif // TRIANGLE_2
-
-	//PascalCaseStyle
-	//pascalCaseStyle
-	//CamelCaseStyle
-	//BigCammel
-	//smallCammel
-	//snake_case_style
-
-#ifdef ROMBUS
-	for (int i = 0; i < n; i++)
-	{
-		for (int j = i; j < n; j++)cout << " "; cout << "/";
-		for (int j = 0; j < i; j++)cout << "  "; cout << "\\";
-		cout << endl;
-	}
-	for (int i = 0; i < n; i++)
-	{
-		for (int j = 0; j <= i; j++)cout << " "; cout << "\\";
-		for (int j = i; j < n - 1; j++)cout << "  "; cout << "/";
-		cout << endl;
-	}
-#endif // ROMBUS
-
-	for (int i = 0; i < n; i++)
-	{
-		for (int j = 0; j < n; j++)
-		{
-			//(i + j) % 2 == 0 ? cout << "+ " : cout << "- ";
-			//if ((i + j) % 2 == 0)cout << "+ ";else cout << "- ";
-			//cout << ((i + j) % 2 == 0 ? "+ " : "- ");
-			cout << (i % 2 == j % 2 ? "+ " : "- ");
-		}
-		cout << endl;
-	}
-	true;
 }
