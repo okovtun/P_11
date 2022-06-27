@@ -6,6 +6,7 @@ using namespace std;
 //#define TRIANGLE_2
 #define TRIANGLE_3
 #define TRIANGLE_4
+//#define ROMBUS
 
 void main()
 {
@@ -54,6 +55,7 @@ void main()
 	//smallCammel
 	//snake_case_style
 
+#ifdef ROMBUS
 	for (int i = 0; i < n; i++)
 	{
 		for (int j = i; j < n; j++)cout << " "; cout << "/";
@@ -63,7 +65,21 @@ void main()
 	for (int i = 0; i < n; i++)
 	{
 		for (int j = 0; j <= i; j++)cout << " "; cout << "\\";
-		for (int j = i; j < n-1; j++)cout << "  "; cout << "/";
+		for (int j = i; j < n - 1; j++)cout << "  "; cout << "/";
 		cout << endl;
 	}
+#endif // ROMBUS
+
+	for (int i = 0; i < n; i++)
+	{
+		for (int j = 0; j < n; j++)
+		{
+			//(i + j) % 2 == 0 ? cout << "+ " : cout << "- ";
+			//if ((i + j) % 2 == 0)cout << "+ ";else cout << "- ";
+			//cout << ((i + j) % 2 == 0 ? "+ " : "- ");
+			cout << (i % 2 == j % 2 ? "+ " : "- ");
+		}
+		cout << endl;
+	}
+	true;
 }
