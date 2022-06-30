@@ -5,6 +5,15 @@ https://meet.google.com/mho-khdw-fhj
 https://discord.gg/vcYaQu6c
 
 TODO:
+Есть статический массив из пяти элементов. Элементы этого массива нужно:
+1. Ввести с клавиатуры;
+2. Вывести на экран в прямом порядке (от нулевого до последнего);
+3. Вывести на экран в обратном порядке (от последнего элемента до нулевого);
+4. Вычислить сумму элементов массива;
+5. Вычислить среднее-арифметическое элементов массива;
+6. Найти минимальное и максимальное значение в массиве;
+
+DONE:
 Вывести на экран все фигуры из файла: 
 1. https://github.com/okovtun/P_11/blob/master/ControlStructures/Geometria/Task.txt;
 2. https://github.com/okovtun/BV_011/blob/master/ControlStructures/Geometria/Task/ChessBoard.jpg;
