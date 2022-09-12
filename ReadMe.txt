@@ -5,6 +5,11 @@ https://meet.google.com/mho-khdw-fhj
 https://discord.gg/vcYaQu6c
 
 TODO:
+1. Зарегистрироваться на github.com;
+2. Написать перегруженные функции FillRand(), Print(), Sum(), Avg(), minValueIn(), maxValueIn()
+   для одномерных и двумерных массивов типа int, float, double и char.
+
+DONE:
 В проекте Functions\Arrays написать следующие функции для работы с массивами:
 	??? FillRand(???);	//заполняет массив случайными числами	DONE
 	??? Print(???);		//выводит массив на экран				DONE
