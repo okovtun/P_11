@@ -5,6 +5,10 @@ https://meet.google.com/mho-khdw-fhj
 https://discord.gg/vcYaQu6c
 
 TODO:
+1. В ветке Templates шаблонизировать все функции кроме FillRand(), эту функцию оставить перегруженной;
+2. От ветки Templates создать ветку SeparatedTemplates, и в ней шаблонные функции вынести в отдельные файлы;
+
+DONE:
 1. Зарегистрироваться на github.com;
 2. Написать перегруженные функции FillRand(), Print(), Sum(), Avg(), minValueIn(), maxValueIn()
    для одномерных и двумерных массивов типа int, float, double и char.
